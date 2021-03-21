@@ -3,24 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23FCC1B126001E0600221F7E /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 23FCC1B026001E0600221F7E /* KeyboardShortcuts */; };
+		5805A12235832CB2258C62EF /* Pods_QuickPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2370651C8FCA8D1A1A938AD3 /* Pods_QuickPass.framework */; };
+		638DF36A26040EA8000C571A /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DF36926040EA8000C571A /* SettingsStore.swift */; };
+		638DF3732606C9FA000C571A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 638DF3722606C9FA000C571A /* README.md */; };
+		63931C392602BFAC00B26742 /* Noto Sans Display Regular Nerd Font Complete.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63931C312602A72300B26742 /* Noto Sans Display Regular Nerd Font Complete.ttf */; };
 		63B79AAA2600079B00FC3C5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B79AA92600079B00FC3C5A /* AppDelegate.swift */; };
-		63B79AAC2600079B00FC3C5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B79AAB2600079B00FC3C5A /* ViewController.swift */; };
 		63B79AAE2600079D00FC3C5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B79AAD2600079D00FC3C5A /* Assets.xcassets */; };
 		63B79AB12600079D00FC3C5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B79AAF2600079D00FC3C5A /* Main.storyboard */; };
+		63DFC9702601486C00B33AE0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DFC96F2601486C00B33AE0 /* Constants.swift */; };
+		63DFC9B42601528400B33AE0 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DFC9B32601528400B33AE0 /* StatusBarController.swift */; };
+		63DFC9B7260161D900B33AE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DFC9B6260161D900B33AE0 /* ContentView.swift */; };
+		63DFC9BA2601627800B33AE0 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DFC9B92601627800B33AE0 /* EventMonitor.swift */; };
+		63DFC9BD260163E500B33AE0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DFC9BC260163E500B33AE0 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2370651C8FCA8D1A1A938AD3 /* Pods_QuickPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25DAE181D3C52A3382291B81 /* Pods-QuickPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickPass.release.xcconfig"; path = "Target Support Files/Pods-QuickPass/Pods-QuickPass.release.xcconfig"; sourceTree = "<group>"; };
+		638DF36926040EA8000C571A /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		638DF3722606C9FA000C571A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		63931C312602A72300B26742 /* Noto Sans Display Regular Nerd Font Complete.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Noto Sans Display Regular Nerd Font Complete.ttf"; sourceTree = "<group>"; };
 		63B79AA62600079B00FC3C5A /* QuickPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B79AA92600079B00FC3C5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		63B79AAB2600079B00FC3C5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		63B79AAD2600079D00FC3C5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63B79AB02600079D00FC3C5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63B79AB22600079D00FC3C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B79AB32600079D00FC3C5A /* QuickPass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickPass.entitlements; sourceTree = "<group>"; };
+		63DFC96F2601486C00B33AE0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		63DFC9B32601528400B33AE0 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		63DFC9B6260161D900B33AE0 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		63DFC9B92601627800B33AE0 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		63DFC9BC260163E500B33AE0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F31DAF408692F0FF2CF96B3E /* Pods-QuickPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickPass.debug.xcconfig"; path = "Target Support Files/Pods-QuickPass/Pods-QuickPass.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5805A12235832CB2258C62EF /* Pods_QuickPass.framework in Frameworks */,
+				23FCC1B126001E0600221F7E /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,8 +58,11 @@
 		63B79A9D2600079B00FC3C5A = {
 			isa = PBXGroup;
 			children = (
+				638DF3722606C9FA000C571A /* README.md */,
 				63B79AA82600079B00FC3C5A /* QuickPass */,
 				63B79AA72600079B00FC3C5A /* Products */,
+				63B79ABB260008A300FC3C5A /* Frameworks */,
+				DD24D12E8338ED37A62A2CA2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +77,53 @@
 		63B79AA82600079B00FC3C5A /* QuickPass */ = {
 			isa = PBXGroup;
 			children = (
+				63931C312602A72300B26742 /* Noto Sans Display Regular Nerd Font Complete.ttf */,
+				63DFC9C0260165FC00B33AE0 /* Helpers */,
+				63DFC9BF260165C000B33AE0 /* Views */,
 				63B79AA92600079B00FC3C5A /* AppDelegate.swift */,
-				63B79AAB2600079B00FC3C5A /* ViewController.swift */,
 				63B79AAD2600079D00FC3C5A /* Assets.xcassets */,
 				63B79AAF2600079D00FC3C5A /* Main.storyboard */,
 				63B79AB22600079D00FC3C5A /* Info.plist */,
 				63B79AB32600079D00FC3C5A /* QuickPass.entitlements */,
+				63DFC96F2601486C00B33AE0 /* Constants.swift */,
+				63DFC9BC260163E500B33AE0 /* MainViewController.swift */,
+				638DF36926040EA8000C571A /* SettingsStore.swift */,
 			);
 			path = QuickPass;
+			sourceTree = "<group>";
+		};
+		63B79ABB260008A300FC3C5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2370651C8FCA8D1A1A938AD3 /* Pods_QuickPass.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63DFC9BF260165C000B33AE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63DFC9B6260161D900B33AE0 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		63DFC9C0260165FC00B33AE0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				63DFC9B92601627800B33AE0 /* EventMonitor.swift */,
+				63DFC9B32601528400B33AE0 /* StatusBarController.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DD24D12E8338ED37A62A2CA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F31DAF408692F0FF2CF96B3E /* Pods-QuickPass.debug.xcconfig */,
+				25DAE181D3C52A3382291B81 /* Pods-QuickPass.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,15 +133,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63B79AB62600079D00FC3C5A /* Build configuration list for PBXNativeTarget "QuickPass" */;
 			buildPhases = (
+				713489469F21A143226C8682 /* [CP] Check Pods Manifest.lock */,
 				63B79AA22600079B00FC3C5A /* Sources */,
 				63B79AA32600079B00FC3C5A /* Frameworks */,
 				63B79AA42600079B00FC3C5A /* Resources */,
+				08B11F6748C17C8D279AC077 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = QuickPass;
+			packageProductDependencies = (
+				23FCC1B026001E0600221F7E /* KeyboardShortcuts */,
+			);
 			productName = QuickPass;
 			productReference = 63B79AA62600079B00FC3C5A /* QuickPass.app */;
 			productType = "com.apple.product-type.application";
@@ -106,6 +174,9 @@
 				Base,
 			);
 			mainGroup = 63B79A9D2600079B00FC3C5A;
+			packageReferences = (
+				23FCC1AF26001E0600221F7E /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+			);
 			productRefGroup = 63B79AA72600079B00FC3C5A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,20 +191,69 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63931C392602BFAC00B26742 /* Noto Sans Display Regular Nerd Font Complete.ttf in Resources */,
 				63B79AAE2600079D00FC3C5A /* Assets.xcassets in Resources */,
+				638DF3732606C9FA000C571A /* README.md in Resources */,
 				63B79AB12600079D00FC3C5A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08B11F6748C17C8D279AC077 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickPass/Pods-QuickPass-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickPass/Pods-QuickPass-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickPass/Pods-QuickPass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		713489469F21A143226C8682 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickPass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		63B79AA22600079B00FC3C5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63B79AAC2600079B00FC3C5A /* ViewController.swift in Sources */,
+				63DFC9BD260163E500B33AE0 /* MainViewController.swift in Sources */,
 				63B79AAA2600079B00FC3C5A /* AppDelegate.swift in Sources */,
+				63DFC9B7260161D900B33AE0 /* ContentView.swift in Sources */,
+				638DF36A26040EA8000C571A /* SettingsStore.swift in Sources */,
+				63DFC9B42601528400B33AE0 /* StatusBarController.swift in Sources */,
+				63DFC9BA2601627800B33AE0 /* EventMonitor.swift in Sources */,
+				63DFC9702601486C00B33AE0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -257,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -268,10 +388,12 @@
 		};
 		63B79AB72600079D00FC3C5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F31DAF408692F0FF2CF96B3E /* Pods-QuickPass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = QuickPass/QuickPass.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = QuickPass/Info.plist;
@@ -279,6 +401,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = org.crashcode.QuickPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -287,10 +410,12 @@
 		};
 		63B79AB82600079D00FC3C5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25DAE181D3C52A3382291B81 /* Pods-QuickPass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = QuickPass/QuickPass.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = QuickPass/Info.plist;
@@ -298,6 +423,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = org.crashcode.QuickPass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -326,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		23FCC1AF26001E0600221F7E /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		23FCC1B026001E0600221F7E /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23FCC1AF26001E0600221F7E /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63B79A9E2600079B00FC3C5A /* Project object */;
 }

@@ -1,0 +1,21 @@
+PODS:
+  - OpenQuickly (0.0.1)
+
+DEPENDENCIES:
+  - OpenQuickly (from `https://github.com/lukakerr/OpenQuickly.git`)
+
+EXTERNAL SOURCES:
+  OpenQuickly:
+    :git: https://github.com/lukakerr/OpenQuickly.git
+
+CHECKOUT OPTIONS:
+  OpenQuickly:
+    :commit: 5a57e58c4748da16e4094db0b06db403852dbd61
+    :git: https://github.com/lukakerr/OpenQuickly.git
+
+SPEC CHECKSUMS:
+  OpenQuickly: dde1fc867b4f88b5233f17a4b32fb1ee0449a7ab
+
+PODFILE CHECKSUM: 285828244ce981c767c974e20797e5d1ebe00805
+
+COCOAPODS: 1.10.1

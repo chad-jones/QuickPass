@@ -1,0 +1,23 @@
+{
+  "name": "OpenQuickly",
+  "version": "0.0.1",
+  "summary": "A custom macOS window that imitates macOS' Spotlight, written in Swift.",
+  "homepage": "https://github.com/lukakerr/OpenQuickly",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": "Luka Kerr",
+  "source": {
+    "git": "https://github.com/lukakerr/OpenQuickly.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "osx": "10.12"
+  },
+  "swift_versions": "4.2",
+  "source_files": "OpenQuickly/**/*",
+  "public_header_files": "OpenQuickly/*.h",
+  "exclude_files": "OpenQuickly/Info.plist",
+  "swift_version": "4.2"
+}
