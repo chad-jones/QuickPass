@@ -17,6 +17,7 @@ enum KeyCode {
   static let numbers: [UInt16:Int] = [18:1,19:2,20:3,21:4,23:5,22:6,26:7,28:8,25:9]
 }
 
+
 class OpenQuicklyViewController: NSViewController, NSTextFieldDelegate {
 
   /// KeyCodes that shouldn't update the searchField
@@ -24,6 +25,8 @@ class OpenQuicklyViewController: NSViewController, NSTextFieldDelegate {
     KeyCode.esc, KeyCode.enter,
     KeyCode.upArrow, KeyCode.downArrow
   ]
+    
+    let nc =  NotificationCenter.default
 
   /// The data used to display the matches
   private var matches: [Any]!
@@ -37,7 +40,7 @@ class OpenQuicklyViewController: NSViewController, NSTextFieldDelegate {
   /// Various views
   private var clipView: NSClipView!
   private var stackView: NSStackView!
-  private var scrollView: NSScrollView!
+  private var scrollView: DisablableScrollView!
   private var searchField: NSTextField!
   private var matchesList: NSOutlineView!
   private var transparentView: NSVisualEffectView!
@@ -203,15 +206,16 @@ class OpenQuicklyViewController: NSViewController, NSTextFieldDelegate {
     let selectedIndex = IndexSet(integer: index)
     matchesList.scrollRowToVisible(index)
     matchesList.selectRowIndexes(selectedIndex, byExtendingSelection: false)
-    addIndicator()
-    addIndicatorSelected(index: index)
+//    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//        self.addIndicatorSelected(selectedIndex: index)
+//    }
   }
 
   private func updateViewSize() {
     let numMatches = matches.count > options.matchesShown
       ? options.matchesShown : matches.count
 
-    let rowHeight = CGFloat(numMatches) * options.rowHeight
+    let rowHeight = CGFloat(numMatches) * (options.rowHeight + 2)
     let newHeight = options.height + rowHeight
 
     let newSize = NSSize(width: options.width, height: newHeight)
@@ -230,14 +234,49 @@ class OpenQuicklyViewController: NSViewController, NSTextFieldDelegate {
     stackView.spacing = matches.count > 0 ? 5.0 : 0.0
   }
 
-    private func addIndicator() {
-        for (index, _) in matches.enumerated() {
-            let row = matchesList.view(atColumn: 0, row: index, makeIfNecessary: true)
-            if row != nil {
-                let text = (row?.subviews[2] ?? nil) as! NSTextField
-                text.stringValue = "⌘\(index + 1)"
+    private func addIndicator(selectedIndex: Int) {
+        let numMatches = matches.count > options.matchesShown
+          ? options.matchesShown : matches.count
+        if selected == 0 {
+            for (index, rowindex) in Range(0...(numMatches-1)).enumerated() {
+                let row = matchesList.view(atColumn: 0, row: rowindex, makeIfNecessary: true)
+                if row != nil {
+                    let text = (row?.subviews[2] ?? nil) as! NSTextField
+                    text.stringValue = "⌘\(index + 1)"
+                }
             }
+            return
         }
+        if selected == matches.count-1 {
+            for (index, rowindex) in Range((selectedIndex-numMatches+1)...(selectedIndex)).enumerated() {
+                let row = matchesList.view(atColumn: 0, row: rowindex, makeIfNecessary: true)
+                if row != nil {
+                    let text = (row?.subviews[2] ?? nil) as! NSTextField
+                    text.stringValue = "⌘\(index + 1)"
+                }
+            }
+            return
+        }
+        var iter = 0
+        for idx in Range(matches.startIndex...(matches.endIndex-1)) {
+                let rowRect = matchesList.rect(ofRow: Int(idx))
+                if NSContainsRect(matchesList.visibleRect, rowRect) {
+                    let row = matchesList.view(atColumn: 0, row: idx, makeIfNecessary: true)
+                    if row != nil {
+                        iter+=1
+                        let text = (row?.subviews[2] ?? nil) as! NSTextField
+                        text.stringValue = "⌘\(iter)"
+                    }
+                }
+                else {
+                    let row = matchesList.view(atColumn: 0, row: idx, makeIfNecessary: true)
+                    if row != nil {
+                        let text = (row?.subviews[2] ?? nil) as! NSTextField
+                        text.stringValue = ""
+                    }
+                }
+            }
+        // addIndicatorSelected(index: index)
     }
     private func addIndicatorSelected(index: Int) {
         let row = matchesList.view(atColumn: 0, row: index, makeIfNecessary: true)
@@ -292,12 +331,13 @@ class OpenQuicklyViewController: NSViewController, NSTextFieldDelegate {
   }
 
   private func setupScrollView() {
-    scrollView = NSScrollView()
+    scrollView = DisablableScrollView()
     scrollView.borderType = .noBorder
     scrollView.drawsBackground = false
     scrollView.autohidesScrollers = true
     scrollView.hasVerticalScroller = false
     scrollView.documentView = matchesList
+    scrollView.verticalLineScroll = options.rowHeight
     scrollView.translatesAutoresizingMaskIntoConstraints = true
   }
 
@@ -369,4 +409,21 @@ extension OpenQuicklyViewController: NSOutlineViewDelegate {
     return options.delegate?.openQuickly(item: item)
   }
 
+}
+
+@IBDesignable
+@objc(BCLDisablableScrollView)
+public class DisablableScrollView: NSScrollView {
+    @IBInspectable
+    @objc(enabled)
+    public var isEnabled: Bool = true
+
+    public override func scrollWheel(with event: NSEvent) {
+        if isEnabled {
+            super.scrollWheel(with: event)
+        }
+        else {
+            nextResponder?.scrollWheel(with: event)
+        }
+    }
 }
